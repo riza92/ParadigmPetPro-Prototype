@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Paradigm Pet Professionals. Evidence-based pet care advice for every pet lover. Paradigm Pet Professionals has 12 years experience working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support virtual consultations and presentations, one-on-one consultations concerning individual pets, group presentations regarding general pet care (can be tailored to the needs of the group).">
+    <meta name="keywords"
+        content="pet care, new pet care consultaion, new pet consultations, Pexperts, Paradigm Pet Professionals, pet care advice">
+    <meta name="author" content="Paradigm Pet Professionals">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="global.css">
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('aside div a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage && link.parentElement.parentElement.tagName === 'ASIDE') {
+                    link.classList.add('activeside');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const submenuParents = document.querySelectorAll('nav ul li');
+
+            submenuParents.forEach(parent => {
+                const submenu = parent.querySelector('.submenu');
+                if (submenu) {
+                    parent.addEventListener('mouseover', () => {
+                        submenu.style.display = 'flex';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                    parent.addEventListener('mouseout', () => {
+                        submenu.style.display = 'none';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelectorAll('.sidebar');
+            sidebar.forEach(element => {
+                element.parentElement.addEventListener('click', () => {
+                    element.classList.toggle('on')
+                    element.classList.toggle('off')
+                })
+                element.classList.toggle('off')
+            });
+
+        });
+    </script>
+    <script>
+        var object = document;
+        document.addEventListener('DOMContentLoaded', function () {
+            const imgbox = object.querySelectorAll('.pictureblurb');
+            imgbox.forEach(element => {
+                if (screen.width >= '900px') {
+                    if (element.firstElementChild.tagName === 'img') {
+                        element.firstElementChild.style.height = (element.lastElementChild.clientHeight + "px");
+                    }
+                    else {
+                        element.lastElementChild.style.height = (element.firstElementChild.clientHeight + "px");
+                    }
+                }
+            })
+        })
+    </script>
+    <title>Paradigm Pet Professionals</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="PPPLogoClear.png" alt="Paradigm Pet Professionals Logo" />
+        <h1>PARADIGM PET PROFESSIONALS</h1>
+        <p><em class="headerslogan">Evidence-based pet care advice for every pet lover.</em></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="minimized">Pet Information
+                <ul class="submenu">
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                </ul>
+            </li>
+            <li class="minimized">Ask a Pexpert
+                <ul class="submenu">
+                    <li><a href="askapexpert.html">Frequently Asked Questions</a></li>
+                    <li><a href="askapexpert.html#contact-form">Ask a Pexpert</a></li>
+                    
+                </ul>
+            </li>
+        </ul>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Fetch</button>
+    </nav>
+    <main>
+        <aside>
+            <div class="menublock">
+                <p class="menu">&#9776</p>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">Home</a>
+                <div class="subsidebar">
+                    <a href="index.html#About-Us">About Us</a>
+                    <a href="index.html#Adoption-Resources">Adoption Resources</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="dogcare.html">Dog Care</a>
+                <div class="subsidebar">
+                    <a href="dogcare.html#About-Dogs">About Dogs</a>
+                    <a href="dogcare.html#Diet&Exercise">Diet & Exercise</a>
+                    <a href="dogcare.html#Grooming&Handling">Grooming & Handling</a>
+                    <a href="dogcare.html#Vaccinations&Medications">Vaccinations & Medications</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="catcare.html">Cat Care</a>
+                <div class="subsidebar">
+                    <a href="catcare.html#About-Cats">About Cats</a>
+                    <a href="catcare.html#zero-to-four-weeks">Zero to Four Weeks</a>
+                    <a href="catcare.html#four-weeks-to-one-year">Four Weeks to One Year</a>
+                    <a href="catcare.html#one-year-to-seven-years">One Year to Seven Years</a>
+                    <a href="catcare.html#seven-years-and-more">Seven Years and More</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="birdcare.html">Bird Care</a>
+                <div class="subsidebar">
+                    <a href="birdcare.html#About-Birds">About Birds</a>
+                    <a href="birdcare.html#depressionwarningsigns">Signs of Depression</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="askapexpert.html">Ask a Pexpert</a>
+                <div class="subsidebar">
+                    <a href="askapexpert.html">FAQs</a>
+                    <a href="askapexpert.html#contact-form">Request a Consultation</a>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div style="justify-content: center; width: 100%; display: flex;">
+                <img src="./groupconsult.png" alt="People in a group consultation in a conference room." style="margin: 0em 2em 2em 2em;" />
+            </div>
+            <h1>F.A.Q.s</h1>
+            <div id="faq">
+                <h3>
+                    Question: What is the best way to rid my dog or cat of fleas?
+                </h3>
+                <p>
+                    Sometimes our furry friends pick up hitchhikers that make them very itchy and uncomfortable. If gone
+                    unchecked, fleas can infest your home, making it even more difficult to rid them from your loved
+                    one’s coat. To eliminate fleas, choose a shampoo specially formulated to kill fleas and be sure to
+                    read and follow all instructions on the label. Repeat treatment as necessary until your pet is free
+                    of fleas; if you see skin irritation, stop use immediately and contact your local vet.
+                </p>
+                <h3>
+                    Question: How long can I expect my pet bird to live?
+                </h3>
+                <p>
+                    The answer can vary widely depending on the type of bird, the size, the environment, and of course,
+                    mother nature. Assuming all is well in the external factors that are out of the owner's control,
+                    cockatiels and budgies live up to 20 years old on average. However, many parrot variations are known
+                    to live nearly an astounding 100 years! As with many living organisms, longevity can be increased by
+                    keeping annual veterinarian visits, maintaining a healthy diet, and keeping your feathery friend's
+                    environment sanitary.
+                </p>
+                <h3>
+                    Question: How often should I feed my pet snake?
+                </h3>
+                <p>
+                    Most snakes eat one to two times per week, depending on their age, size, and activity level. Female
+                    snakes often increase their food intake as breeding season gets underway. Some snakes can go as long
+                    as two weeks before needing their next meal; this is normal. However, if your snake has not eaten in
+                    two or three weeks and seems lethargic, reach out to your local vet to determine if your snake might
+                    be ill or injured.
+                </p>
+            </div>
+            <div class="pictureblurb" style="justify-content: center;">
+                <p></p>
+                <img src="./soloconsult.png" alt="People in a solo consultation on a bench." />
+            </div>
+            <div class="contactform" id="contact-form">
+                <h2>Request a Consultation</h2>
+                <form>
+                    <label for="name">Owner's Name:</label>
+                    <input name="name" type="text" placeholder="Owner's Name" required />
+                    <label for="phone">Phone Number:</label>
+                    <input name="phone" type="tel" placeholder="(123) 456-7890" required />
+                    <label for="email">Email:</label>
+                    <input name="email" type="email" placeholder="email@xyz.com" required />
+                    <label for="timezone">Timezone:</label>
+                    <select name="timezone" required>
+                        <option disabled selected value="">-- Select Timezone --</option>
+                        <option value="Pacific Timezone">Pacific Timezone</option>
+                    </select>
+                    <label for="petname">Pet's Name:</label>
+                    <input name="petname" type="text" placeholder="Pet's Name" />
+                    <label for="pettype">Pet's Type:</label>
+                    <input name="pettype" type="text" placeholder="Type of Pet" />
+                    <label for="petage">Pet's Age:</label>
+                    <input name="petage" type="text" placeholder="X years or Y months old" />
+                    <label for="context">Additional Details</label>
+                    <textarea name="context" placeholder="Additional details or questions here."></textarea>
+                    <button type="submit">Request a Consultation</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <hr />
+    <footer>
+        <div>
+            <div class="branding">
+                <img class="logo" src="PPPLogo.png" alt="Paradigm Pet Professionals Logo" />
+                <p><em>Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in
+                        pet health and nutrition, and customer recognition for outstanding support.Virtual consultations
+                        and presentations, one-on-one consultations concerning individual pets, group presentations
+                        offered regarding general pet care (can be tailored to the needs of the group) </em></p>
+            </div>
+            <div class="links">
+                <h3>Learn More About Your Companions</h3>
+                <ul>
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                    <li><a href="askapexpert.html">FAQs</a></li>
+                </ul>
+                <div>
+                    <a href="askapexpert.html#contact-form"><button>Ask a Pexpert</button></a>
+                </div>
+            </div>
+        </div>
+        <p>User Interface Design Prototype - Educational Project</p>
+    </footer>
+</body>
+
+</html>

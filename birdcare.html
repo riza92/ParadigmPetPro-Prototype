@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Paradigm Pet Professionals. Evidence-based pet care advice for every pet lover. Paradigm Pet Professionals has 12 years experience working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support virtual consultations and presentations, one-on-one consultations concerning individual pets, group presentations regarding general pet care (can be tailored to the needs of the group).">
+    <meta name="keywords"
+        content="pet care, new pet care consultaion, new pet consultations, Pexperts, Paradigm Pet Professionals, pet care advice, bird care, bird emotional care, bird social care">
+    <meta name="author" content="Paradigm Pet Professionals">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="global.css">
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('aside div a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage && link.parentElement.parentElement.tagName === 'ASIDE') {
+                    link.classList.add('activeside');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const submenuParents = document.querySelectorAll('nav ul li');
+
+            submenuParents.forEach(parent => {
+                const submenu = parent.querySelector('.submenu');
+                if (submenu) {
+                    parent.addEventListener('mouseover', () => {
+                        submenu.style.display = 'flex';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                    parent.addEventListener('mouseout', () => {
+                        submenu.style.display = 'none';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelectorAll('.sidebar');
+            sidebar.forEach(element => {
+                element.parentElement.addEventListener('click', () => {
+                    element.classList.toggle('on')
+                    element.classList.toggle('off')
+                })
+                element.classList.toggle('off')
+            });
+
+        });
+    </script>
+    <script>
+        var object = document;
+        document.addEventListener('DOMContentLoaded', function() {
+            const imgbox = object.querySelectorAll('.pictureblurb');
+            imgbox.forEach(element => {
+                if(screen.width >= '900px'){
+                element.firstElementChild.style.height = (element.lastElementChild.clientHeight + "px");
+                }
+            })
+        })
+    </script>
+    <title>Paradigm Pet Professionals - Bird Care</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="PPPLogoClear.png" alt="Paradigm Pet Professionals Logo" />
+        <h1>PARADIGM PET PROFESSIONALS</h1>
+        <p><em class="headerslogan">Evidence-based pet care advice for every pet lover.</em></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="minimized">Pet Information
+                <ul class="submenu">
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                </ul>
+            </li>
+            <li class="minimized">Ask a Pexpert
+                <ul class="submenu">
+                    <li><a href="askapexpert.html">Frequently Asked Questions</a></li>
+                    <li><a href="askapexpert.html#contact-form">Ask a Pexpert</a></li>
+                </ul>
+            </li>
+        </ul>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Fetch</button>
+    </nav>
+    <main>
+        <aside>
+            <div class="menublock">
+                <p class="menu">&#9776</p>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">Home</a>
+                <div class="subsidebar">
+                    <a href="index.html#About-Us">About Us</a>
+                    <a href="index.html#Adoption-Resources">Adoption Resources</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="dogcare.html">Dog Care</a>
+                <div class="subsidebar">
+                    <a href="dogcare.html#About-Dogs">About Dogs</a>
+                    <a href="dogcare.html#Diet&Exercise">Diet & Exercise</a>
+                    <a href="dogcare.html#Grooming&Handling">Grooming & Handling</a>
+                    <a href="dogcare.html#Vaccinations&Medications">Vaccinations & Medications</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="catcare.html">Cat Care</a>
+                <div class="subsidebar">
+                    <a href="catcare.html#About-Cats">About Cats</a>
+                    <a href="catcare.html#zero-to-four-weeks">Zero to Four Weeks</a>
+                    <a href="catcare.html#four-weeks-to-one-year">Four Weeks to One Year</a>
+                    <a href="catcare.html#one-year-to-seven-years">One Year to Seven Years</a>
+                    <a href="catcare.html#seven-years-and-more">Seven Years and More</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="birdcare.html">Bird Care</a>
+                <div class="subsidebar">
+                    <a href="birdcare.html#About-Birds">About Birds</a>
+                    <a href="birdcare.html#depressionwarningsigns">Signs of Depression</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="askapexpert.html">Ask a Pexpert</a>
+                <div class="subsidebar">
+                    <a href="askapexpert.html">FAQs</a>
+                    <a href="askapexpert.html#contact-form">Request a Consultation</a>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <h1>Bird Care</h1>
+            <div id="About-Birds">
+                <div class="pictureblurb">
+                    <img src="./bird.png" alt="bird sitting on door to cage">
+                <p>
+                    Birds are very intriguing creatures as they can range from birds as small as a Cuban bee hummingbird
+                    (about two inches long and a little over 1/20 of an ounce) to as large as an ostrich. While most
+                    birds fly, there are some that don't. Birds are amazing and each breed is unique in its own way,
+                    particularly when it comes to their relational needs and well-being. Unfortunately, birds can
+                    experience sadness and depression just like humans. A number of root causes may be responsible for
+                    your bird's depression such as an illness (either physical or mental), losing its companion, or
+                    increasingly becoming bored. Some signs to help identify if your bird is experiencing depression may
+                    include the following:
+                </p>
+            </div>
+                <ul id="depressionwarningsigns">
+                    <li>
+                        reduced appetite
+                    </li>
+                    <li>
+                        becoming increasingly irritable
+                    </li>
+                    <li>
+                        aggressive behavior
+                    </li>
+                    <li>
+                        songs have a different, more solemn tone
+                    </li>
+                </ul>
+                <p>
+                    Be sure to tell your veterinarian if you see signs of any of these symptoms. Just like many
+                    illnesses, identifying and treating the symptoms earlier may drastically increase the lifespan of
+                    your birdie.
+                </p>
+            </div>
+        </section>
+    </main>
+    <hr />
+    <footer>
+        <div>
+            <div class="branding">
+                <img class="logo" src="PPPLogo.png" alt="Paradigm Pet Professionals Logo" />
+                <p><em>Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in
+                        pet health and nutrition, and customer recognition for outstanding support.Virtual consultations
+                        and presentations, one-on-one consultations concerning individual pets, group presentations
+                        offered regarding general pet care (can be tailored to the needs of the group) </em></p>
+            </div>
+            <div class="links">
+                <h3>Learn More About Your Companions</h3>
+                <ul>
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                    <li><a href="askapexpert.html">FAQs</a></li>
+                </ul>
+                <div>
+                    <a href="askapexpert.html#contact-form"><button>Ask a Pexpert</button></a>
+                </div>
+            </div>
+        </div>
+        <p>User Interface Design Prototype - Educational Project</p>
+    </footer>
+</body>
+
+</html>

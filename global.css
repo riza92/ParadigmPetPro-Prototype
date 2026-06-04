@@ -1,0 +1,521 @@
+:root {
+    --primary-colorA: #003B6D;
+    --primary-colorB: #6699CC;
+    --secondary-colorA: #676767;
+    --secondary-colorB: #BDBDBD;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+header {
+    background-color: var(--secondary-colorB);
+    color: white;
+    padding: 1rem 2rem 0rem 4rem;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: var(--primary-colorA);
+    color: var(--secondary-colorB);
+    border: 2px solid var(--secondary-colorB);
+    border-radius: 20px;
+    padding: 2rem;
+    label{
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
+    input, select {
+        width: 100%;
+        padding: .5rem;
+        border: 2px solid var(--secondary-colorB);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+    textarea {
+        width: 100%;
+        height: 10em;
+        padding: .5rem;
+        border: 2px solid var(--secondary-colorB);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+}
+
+nav {
+    background-color: var(--primary-colorA);
+    color: var(--secondary-colorB);
+    font-weight: bold;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    width: 90%;
+    min-width: fit-content;
+    height: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: sticky;
+    top: 10px;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+nav input {
+    width: 75%;
+    min-width: 10em;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1rem;
+    flex-grow: 1;
+}
+
+nav button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-colorB);
+    color: var(--primary-colorA);
+    font-weight: bold;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 4;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li {
+    width: 100%;
+    min-width: 10em;
+    height: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+.minimized:after {
+    content: "+";
+    position: relative;
+    top: 50%;
+}
+
+.expanded:after {
+    content: "-";
+    position: relative;
+    top: 50%;
+}
+
+.submenu {
+    display: none;
+    background-color: var(--primary-colorA);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 0rem 3rem 0rem;
+    position: absolute;
+
+}
+
+.submenu li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.submenu li:hover {
+    background-color: var(--secondary-colorB);
+
+    a {
+        color: var(--primary-colorA);
+    }
+}
+
+.active {
+    background-color: var(--secondary-colorB);
+}
+
+.active a {
+    color: var(--primary-colorA);
+}
+
+.active a:visited {
+    color: var(--primary-colorA);
+}
+
+h1 {
+    color: var(--primary-colorA);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: -0.5rem 0;
+}
+
+h2 {
+    color: var(--primary-colorB);
+    font-size: 1.75em;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--secondary-colorA);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p em {
+    color: var(--secondary-colorA);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+li {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+nav a {
+    color: var(--secondary-colorB);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+a {
+    color: var(--primary-colorB);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-colorB);
+    text-decoration: underline;
+}
+
+a:visited:not(nav>ul>li>a) {
+    color: var(--primary-colorA);
+    text-decoration: none;
+}
+
+a:visited:hover:not(nav>ul>li>a):not(nav>ul>li>ul>li>a) {
+    color: var(--secondary-colorB);
+    text-decoration: underline;
+}
+
+section {
+    margin: 1.5rem;
+    padding: 2rem 2rem 2rem 4rem;
+    border-radius: 20px;
+}
+
+section>div>div>ul {
+    margin: 1.5rem;
+    padding: 2rem;
+    background-color: var(--primary-colorA);
+    border: 2px solid var(--secondary-colorB);
+    border-radius: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    a{
+        color: var(--primary-colorB);
+        cursor: pointer;
+    }
+    a:visited{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a:hover{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    li{
+        color: var(--secondary-colorB);
+    }
+}
+
+section>div>ul {
+    margin: .75rem;
+    padding: 2rem;
+    background-color: var(--primary-colorA);
+    border: 2px solid var(--secondary-colorB);
+    border-radius: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    a{
+        color: var(--primary-colorB);
+        cursor: pointer;
+    }
+    a:visited{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a:hover{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    li{
+        color: var(--secondary-colorB);
+    }
+}
+
+.list {
+    margin: .75rem;
+    padding: 2rem;
+    background-color: var(--primary-colorA);
+    border: 2px solid var(--secondary-colorB);
+    border-radius: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    a{
+        color: var(--primary-colorB);
+        cursor: pointer;
+    }
+    a:visited{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a:hover{
+        color: var(--secondary-colorB);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    li{
+        color: var(--secondary-colorB);
+    }
+}
+
+.pictureblurb {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    p{
+        height: fit-content;
+    }
+    img{
+        max-width: 20em;
+        width: auto;
+        margin: 1rem;
+        
+    }
+    @media screen and (max-width: 1150px) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+footer {
+    padding: 1rem 2rem 1rem 4rem;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: row;
+
+    ul {
+        list-style: none;
+    }
+}
+
+footer>div>div>ul>li>a{
+    color: var(--primary-colorB);
+    text-decoration:underline;
+}
+
+footer>div>div>ul>li>a:visited{
+    color: var(--primary-colorA);
+    text-decoration:underline;
+}
+
+hr {
+    color: var(--primary-colorB);
+    width: 100%;
+    height: 2px;
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-colorB);
+    color: var(--primary-colorA);
+    font-weight: bold;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.branding {
+    flex: 2;
+}
+
+.links {
+    flex: 2;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.logo {
+    width: 20rem;
+    height: auto;
+    margin-bottom: .5em;
+}
+
+footer .logo {
+    width: 10rem;
+}
+
+.headerslogan {
+    margin-left: 3em;
+    color: var(--primary-colorA);
+}
+
+aside {
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    background-color: var(--primary-colorA);
+    border: .125em solid var(--secondary-colorB);
+    border-radius: 20px;
+    padding: 0rem 1rem 0rem 1rem;
+
+    div{
+        width: 100%;
+        padding-bottom: 0.5em;
+    }
+
+    div>a {
+        color: var(--secondary-colorB);
+        display: block;
+        padding-bottom: 0.25em;
+        font-weight: bold;
+    }
+
+    div>p {
+        text-align: center;
+        color: var(--secondary-colorB);
+        width: 100%;
+    }
+    
+    @media only screen and (min-width: 901px) {
+        display: none;
+    }
+}
+
+aside>.sidebar>.activeside {
+    background-color: var(--secondary-colorB);
+    color: var(--primary-colorA);
+}
+
+.sidebar {
+    a:visited:not(.activeside){
+        color: var(--secondary-colorB)
+    }
+}
+
+.submenu {
+    background-color: var(--primary-colorB);
+    color: var(--secondary-colorA);
+    a{
+        color: var(--primary-colorA);
+    }
+    a:visited{
+        color: var(--primary-colorA);
+    }
+    a:hover{
+        background-color: var(--secondary-colorB);
+        color: var(--primary-colorA);
+        text-decoration: underline;
+    }
+}
+
+.subsidebar {
+    background-color: var(--primary-colorB);
+    color: var(--secondary-colorA);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-indent: 1em;
+    margin-right: 1em;
+
+    a{
+        padding-top: .25em;
+        color: var(--primary-colorA);
+        font-weight: normal;
+        text-decoration: underline;
+    }
+    a:visited{
+        color: var(--primary-colorA);
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
+
+
+
+.on {
+    display: flex;
+    flex-direction: column;
+}
+
+.off {
+    display: none;
+}
+
+.menublock {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0em 1em 0em 0em;
+}
