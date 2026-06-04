@@ -85,5 +85,244 @@
         }
       });
     </script>
+    <meta charset="UTF-8">
+    <meta lang="en-US">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Paradigm Pet Professionals. Evidence-based pet care advice for every pet lover. Paradigm Pet Professionals has 12 years experience working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support virtual consultations and presentations, one-on-one consultations concerning individual pets, group presentations regarding general pet care (can be tailored to the needs of the group).">
+    <meta name="keywords"
+        content="pet care, new pet care consultaion, new pet consultations, Pexperts, Paradigm Pet Professionals, pet care advice">
+    <meta name="author" content="Paradigm Pet Professionals">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="global.css">
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('aside div a');
+            const currentPage = window.location.pathname.split('/').pop();
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage && link.parentElement.parentElement.tagName === 'ASIDE') {
+                    link.classList.add('activeside');
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const submenuParents = document.querySelectorAll('nav ul li');
+
+            submenuParents.forEach(parent => {
+                const submenu = parent.querySelector('.submenu');
+                if (submenu) {
+                    parent.addEventListener('mouseover', () => {
+                        submenu.style.display = 'flex';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                    parent.addEventListener('mouseout', () => {
+                        submenu.style.display = 'none';
+                        submenu.parentElement.classList.toggle('minimized');
+                        submenu.parentElement.classList.toggle('expanded');
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        var object = document;
+        object.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelectorAll('.sidebar');
+            sidebar.forEach(element => {
+                element.parentElement.addEventListener('click', () => {
+                    element.classList.toggle('on')
+                    element.classList.toggle('off')
+                })
+                element.classList.toggle('off')
+            });
+
+        });
+    </script>
+    <script>
+        var object = document;
+        document.addEventListener('DOMContentLoaded', function () {
+            const imgbox = object.querySelectorAll('.pictureblurb');
+            imgbox.forEach(element => {
+                if (screen.width >= '900px') {
+                    if (element.firstElementChild.tagName === 'img') {
+                        element.firstElementChild.style.height = (element.lastElementChild.clientHeight + "px");
+                    }
+                    else {
+                        element.lastElementChild.style.height = (element.firstElementChild.clientHeight + "px");
+                    }
+                }
+            })
+        })
+    </script>
+    <title>Paradigm Pet Professionals</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="public/PPPLogoClear.png" alt="Paradigm Pet Professionals Logo" />
+        <h1>PARADIGM PET PROFESSIONALS</h1>
+        <p><em class="headerslogan">Evidence-based pet care advice for every pet lover.</em></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="minimized">Pet Information
+                <ul class="submenu">
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                </ul>
+            </li>
+            <li class="minimized">Ask a Pexpert
+                <ul class="submenu">
+                    <li><a href="askapexpert.html">Frequently Asked Questions</a></li>
+                    <li><a href="askapexpert.html#contact-form">Ask a Pexpert</a></li>
+                </ul>
+            </li>
+        </ul>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Fetch</button>
+    </nav>
+    <main>
+        <aside>
+            <div class="menublock">
+                <p class="menu">&#9776</p>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">Home</a>
+                <div class="subsidebar">
+                    <a href="index.html#About-Us">About Us</a>
+                    <a href="index.html#Adoption-Resources">Adoption Resources</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="dogcare.html">Dog Care</a>
+                <div class="subsidebar">
+                    <a href="dogcare.html#About-Dogs">About Dogs</a>
+                    <a href="dogcare.html#Diet&Exercise">Diet & Exercise</a>
+                    <a href="dogcare.html#Grooming&Handling">Grooming & Handling</a>
+                    <a href="dogcare.html#Vaccinations&Medications">Vaccinations & Medications</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="catcare.html">Cat Care</a>
+                <div class="subsidebar">
+                    <a href="catcare.html#About-Cats">About Cats</a>
+                    <a href="catcare.html#zero-to-four-weeks">Zero to Four Weeks</a>
+                    <a href="catcare.html#four-weeks-to-one-year">Four Weeks to One Year</a>
+                    <a href="catcare.html#one-year-to-seven-years">One Year to Seven Years</a>
+                    <a href="catcare.html#seven-years-and-more">Seven Years and More</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="birdcare.html">Bird Care</a>
+                <div class="subsidebar">
+                    <a href="birdcare.html#About-Birds">About Birds</a>
+                    <a href="birdcare.html#depressionwarningsigns">Signs of Depression</a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="askapexpert.html">Ask a Pexpert</a>
+                <div class="subsidebar">
+                    <a href="askapexpert.html">FAQs</a>
+                    <a href="askapexpert.html#contact-form">Request a Consultation</a>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <h1>Paradigm Pet Professionals</h1>
+            <div id="About-Us">
+                <p><em>
+                        Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and
+                        hearts to a pet increases our longevity and improves our overall quality of life as well as the
+                        lives of our pets. At Pet Paradigm Professionals, our mission is to offer resources to help you
+                        care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have
+                        been working with pet owners and professionals alike for the past twelve years. They offer
+                        one-on-one consultations with current and prospective pet owners as well as group presentations
+                        designed for veterinary, pet shelter, and pet breeding professionals
+                    </em></p>
+                <p>
+                    Looking for basic pet care advice for the most common type of pets? Need additional help determining
+                    which type of pet is right for you and your family? We will work with you and provide tailored
+                    evidence-based pet care to ensure lifelong health and wellness of your new companion.
+                </p>
+            </div>
+            <div id="Adoption-Resources">
+                <h2>Adoption Resources</h2>
+                <p>
+                    Looking for your new best friend? The following organizations can help you find and adopt the
+                    perfect companion:
+                </p>
+                <div class="pictureblurb">
+                    <img src="public/adopt.png" alt="kitten at adoption center">
+                    <ul>
+                        <li>General Pet Resources: <a
+                                href="https://bestfriends.org/pet-care-resources/issues/pet-adoption-resources"
+                                target="_blank">https://bestfriends.org/pet-care-resources/issues/pet-adoption-resources</a>
+                        </li>
+                        <li>ASPCA: <a href="https://www.aspca.org/" target="_blank">https://www.aspca.org/</a></li>
+                        <li>Fish Rescue: <a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/"
+                                target="_blank">https://www.sterlingshelter.org/humane-society/koi-fish-rescue/</a></li>
+                        <li>Snake Rescue: <a href="https://savethesnakes.org/snakerescuecall/"
+                                target="_blank">https://savethesnakes.org/snakerescuecall/</a></li>
+                        <li>Bird Rescue: <a href="https://ftlob.rescuegroups.org/"
+                                target="_blank">https://ftlob.rescuegroups.org/</a></li>
+                    </ul>
+                </div>
+                <p>
+                    We are also happy to help you navigate the adoption process! We will guide you through each step in
+                    the process from determining which type of pet is best suited for your family and home environment,
+                    to completing the necessary paperwork, to bringing your new loved one home. Please fill out our
+                    contact form to request a consultation. We will contact you within 48 hours to schedule a
+                    consultation. All fields are required.
+                </p>
+            </div>
+
+        </section>
+    </main>
+    <hr />
+    <footer>
+        <div>
+            <div class="branding">
+                <img class="logo" src="public/PPPLogo.png" alt="Paradigm Pet Professionals Logo" />
+                <p><em>Paradigm Pet Professionals has 12 years’ experience working with pet owners, certifications in
+                        pet health and nutrition, and customer recognition for outstanding support.Virtual consultations
+                        and presentations, one-on-one consultations concerning individual pets, group presentations
+                        offered regarding general pet care (can be tailored to the needs of the group) </em></p>
+            </div>
+            <div class="links">
+                <h3>Learn More About Your Companions</h3>
+                <ul>
+                    <li><a href="dogcare.html">Dog Care</a></li>
+                    <li><a href="catcare.html">Cat Care</a></li>
+                    <li><a href="birdcare.html">Bird Care</a></li>
+                    <li><a href="askapexpert.html">FAQs</a></li>
+                </ul>
+                <div>
+                    <a href="askapexpert.html#contact-form"><button>Ask a Pexpert</button></a>
+                </div>
+            </div>
+        </div>
+        <p>User Interface Design Prototype - Educational Project</p>
+    </footer>
   </body>
 </html>
